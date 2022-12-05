@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import { UpdateAirtable } from "../../services/airtable";
 import "./Product.css";
 
@@ -14,6 +15,7 @@ const Products = ({ products }) => {
 
   const handleSendEmail = (id) => {
     UpdateAirtable(id);
+    toast.success("Une demande de réapprovisionnement a été envoyée");
   };
 
   return (
@@ -127,7 +129,7 @@ const Products = ({ products }) => {
                       className="product-add"
                       onClick={() => handleSendEmail(product.id)}
                     >
-                      Envoyer une demande de restock
+                      Envoyer une demande de réapprovisionnement
                     </button>
                   </div>
                 </div>
@@ -136,6 +138,7 @@ const Products = ({ products }) => {
           </div>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };

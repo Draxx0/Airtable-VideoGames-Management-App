@@ -2,13 +2,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CreateAirtable } from "../../services/airtable";
 
-const CreateProduct = ({ products, setProducts }) => {
+const CreateProduct = ({}) => {
   const [credentials, setCredentials] = useState({});
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     CreateAirtable("PRODUITS", credentials);
-    setProducts([...products, credentials]);
     navigate("/");
   };
   const handleChange = (e) => {

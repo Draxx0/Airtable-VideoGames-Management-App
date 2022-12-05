@@ -1,0 +1,15 @@
+@media screen and (max-width: 1062px) {
+  .nav-row h1 {
+    display: none;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+  }
+
+  .logo {
+    width: 92px;
+  }
+}

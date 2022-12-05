@@ -26,7 +26,7 @@ export default function CreateAirtable(sheet, credentials, currentProduct) {
         total: credentials.totalPrice,
         status: "confirmé",
         date: formatDate(new Date()),
-        name: currentProduct.field.names,
+        name: currentProduct?.field.names,
       },
     },
   ];

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
+import './Navbar.css'
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -8,8 +9,8 @@ const Navbar = () => {
       <div className="nav-row">
         <img src={Logo} className="logo" onClick={() => navigate("/")} />
         <h1>
-          Bienvenue sur la{" "}
-          <span className="colored">sur la gestion des stocks</span>
+          Bienvenue sur la sur la gestion des stocks{" "}
+          <span className="colored">Micromania</span>
         </h1>
       </div>
 
